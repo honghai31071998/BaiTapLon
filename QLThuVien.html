@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>QUẢN LÝ THƯ VIỆN</title>
 	<link rel="stylesheet" type="text/css" href="QLThuVien.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 </head>
+
 <body>
-<div id="wrapper">
+	<div id="wrapper">
 		<div id="header">
 			<div id="logo">
-				<img src="img/imgsach.jpg" width="280px;"></div>
+				<img src="img/imgsach.jpg" width="250px;"></div>
 			<div id="slogan">
 				<div id="search">
-					<input type="text"></input></div>
-				<div id="ab">
+					<div id="search-box">
+						<input class="search-box-input" type="text" name="timkiem" value="Tìm kiếm"></input>
+						<button class="icon-search"><i class="fas fa-search"></i></button>
+					</div>
+				</div>
+				<div id="ab">hhhhhhhhhhh
 				</div>
 			</div>
 			<div id="abc">
-				<button type="button">Login</button>
-				<a href="#">Sign up</a>
+				<button type="button"><a href="dangnhaptk.php">Login</a></button>
+				<a href="dangkitk.php">Sign up</a>
 			</div>
 		</div>
 		<!--header-->
@@ -26,10 +33,10 @@
 			<ul>
 				<li><a href="QLThuVien.html">Trang Chủ</a></li>
 				<li><a href="GioiThieu.html">Giới Thiệu</a></li>
-				<li><a href="#">Giáo Trình</a></li>
+				<li><a href="Giaotrinh.html">Giáo Trình</a></li>
 				<li><a href="#">Truyện</a></li>
-				<li><a href="#">Trợ Giúp</a></li>
 				<li><a href="muon_sach.php">Mượn sách</a></li>
+				<li><a href="#">Trợ Giúp</a></li>
 			</ul>
 		</div>
 		<!--menu-->
@@ -46,12 +53,56 @@
 		</figure>
 	</div>
 	<!--Sidebar-->
-	<div id="container"></div>
+
+	<div id="container">
+		<div class="location">
+			<h3 class="title1">GIỚI THIỆU SÁCH MỚI</h3>
+			<div class="location11"></div>
+		</div>
+		<div class="location2">
+			<div class="container-left">
+				<div class="block1">
+					<div class="box-common">
+						<div class="heading">
+							<h4 class="box-title" style="width: 75%">THÔNG TIN SÁCH</h4>
+						</div>
+					</div>
+					<div class="border">
+					</div>
+				</div>
+				<div class="block">
+					<div class="box-common">
+						<div class="heading">
+							<h4 class="box-title" style="width: 75%">THÔNG TIN SÁCH</h4>
+						</div>
+					</div>
+					<div class="border">
+					</div>
+				</div>
+			</div>
+			<div class="container-right">
+				<div class="panel-news">
+					<div class="panel-news-heading">
+						<h4 class="panel-news-title">
+							<br>
+							<center>Hỗ trợ trực tuyến</center>
+						</h4>
+					</div>
+					<div class="panel-news-body">
+						<p>
+							<img class="img-responsive-2" src="img/hotro.jpg" ,style="width:220px;height:180px;" alt="Image"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
 	<div id="Footer">
 		<p>Websize - Quản Lý Thư Viện @2018</p>
 	</div>
 	<!--Footer-->
-</div>
+	</div>
 
 </body>
+
 </html>
