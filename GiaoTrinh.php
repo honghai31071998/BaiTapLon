@@ -27,19 +27,19 @@
   <center><h1>Danh Sách Giáo Trình</h1>
   <table border="1">
     <tr>
-      <th>GiaoTrinhID</th>
       <th>TenGiaoTrinh</th>
       <th>NhaXuatBan</th>
       <th>NamXuatBan</th>
+      <th>GiaoTrinhID</th>
       <th>Action</th>
     </tr>
     <?php 
       while ($rs = mysqli_fetch_assoc($result)) {
         echo "<tr>";
-        echo "<td>".$rs['GiaoTrinhID']."</td>";
         echo "<td>".$rs['TenGiaoTrinh']."</td>";
         echo "<td>".$rs['NhaXuatBan']."</td>";
         echo "<td>".$rs['NamXuatBan']."</td>";
+        echo "<td>".$rs['GiaoTrinhID']."</td>";
         echo "<td><a href = 'muon_sach.php'>Mượn Sách</td>";
         echo "<tr>";
       }

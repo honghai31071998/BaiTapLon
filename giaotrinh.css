@@ -7,6 +7,18 @@ body{
 	/*background-color: antiquewhite;*/
 }
 
+ .border11{
+    height:250px;
+}
+.border11-left{
+	width:250px;
+	float: left;
+}
+..border11-right{
+	width:510px;
+	float: right;
+	padding-left:18px;} 
+
 #wrapper{
 	position: relative;
 	left:0;
@@ -32,10 +44,6 @@ body{
 	float:left;
 }
 
-input{
-	float:right;
-	margin-right: 25px;
-}
 
 
 #ab{
@@ -216,9 +224,7 @@ input{
     width:778px;
     height:300px;
 }
-.border11{
-    height:250px;
-}
+
 th{
     width:778px;
     height:20px;

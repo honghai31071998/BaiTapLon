@@ -77,7 +77,7 @@
         </div>
     </form>
 <?php
-$connect=mysqli_connect('localhost','root','','thuvien');
+$connect=mysqli_connect('localhost','root','','qlthuvien');
 if(!$connect)
 {
     echo'kết nối thất bại'.mysqli_connect_error();
