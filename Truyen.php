@@ -17,7 +17,7 @@ include("modules/header.php");
                 <div class="border-tk">
                     <div class="border-row">
                         <div class="row-col">
-                            <h4>Tên giáo trình</h4>
+                            <h4>Tên truyện</h4>
                             <input type="text" name="tk" style="width:140px;">
                         </div>
                         <div class="row-col">
@@ -35,7 +35,7 @@ include("modules/header.php");
             <div class="block2">
                 <div class="box-common">
                     <div class="heading">
-                        <h4 class="box-title" style="width: 75%"> GIÁO TRÌNH</h4>
+                        <h4 class="box-title" style="width: 75%"> TRUYỆN NƯỚC NGOÀI</h4>
                     </div>
                 </div>
                 <div class="border1">
@@ -50,29 +50,27 @@ include("modules/header.php");
                                     <div class="border-td">
                                         <div class="fff">
                                             <h4>
-                                                <li> <a href="chitietsach.php">
-                                                        Hệ thống thông tin địa lý</a></li>
+                                                <li> <a href="#">
+													Đi tìm thời gian đã mất  </a></li>
                                             </h4>
                                         </div>
                                         <div class="ggg">
-                                            <div class="hhh"><img src="giaotrinh/img_13.jpg" style="width:100px;"></div>
-                                            <div class="jjj">Tác giả: Hoàng Xuân Thành, Hoàng Lê Long <br>
-                                                Nhà xuất bản: Bách khoa Hà Nội <br>
-                                                Năm xuất bản: 2018 </div>
+                                            <div class="hhh"><img src="img/img_11.jpg" style="width:100px;"></div>
+                                            <div class="jjj">Tác giả:Marcel Proust <br>
+                                                 </div>
                                         </div>
                                 </td>
                                 <td>
                                     <div class="border-td">
                                         <div class="fff">
                                             <h4>
-                                                <li>Hình học đường và thiết kế định tuyến</li>
+                                                <li><a href="#">Đại gia Gatsby Đại gia Gatsby (F.Scott Fitzgerald)</a></li>
                                             </h4>
                                         </div>
                                         <div class="ggg">
-                                            <div class="hhh"><img src="giaotrinh/img_14.jpg" style="width:100px;"></div>
-                                            <div class="jjj">Tác giả: Lại Tuấn Anh<br>
-                                                Nhà xuất bản: Bách khoa Hà Nội<br>
-                                                Năm xuất bản: 2018 </div>
+                                            <div class="hhh"><img src="img/img_10.jpg" style="width:100px;"></div>
+                                            <div class="jjj">Tác giả:F.Scott Fitzgerald<br>
+                                                </div>
                                         </div>
                                 </td>
                             </tr>
@@ -80,7 +78,7 @@ include("modules/header.php");
                     </div>
                     <div class="pagination">
                         <ul>
-                            <li><a href="Giaotrinh.php">1</a></li>
+                            <li><a href="Truyện.php">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
                             <li><a href="#">Next</a></li>
@@ -93,7 +91,7 @@ include("modules/header.php");
             <div class="block2">
                 <div class="box-common">
                     <div class="heading">
-                        <h4 class="box-title" style="width: 75%"> TL THAM KHẢO</h4>
+                        <h4 class="box-title" style="width: 75%"> TRUYỆN KIẾM HIỆP </h4>
                     </div>
                 </div>
                 <div class="border1">
@@ -108,28 +106,26 @@ include("modules/header.php");
                                     <div class="border-td">
                                         <div class="fff">
                                             <h4>
-                                                <li>Kiểm soát chất lượng không khí bên trong công trình</li>
+                                                <li><a href="#">Tru Tiên</a></li>
                                             </h4>
                                         </div>
                                         <div class="ggg">
-                                            <div class="hhh"><img src="img/img_11.jpg" style="width:100px;"></div>
-                                            <div class="jjj">Tác giả: Hoàng Xuân Thành, Hoàng Lê Long <br>
-                                                Nhà xuất bản: Bách khoa Hà Nội <br>
-                                                Năm xuất bản: 2018 </div>
+                                            <div class="hhh"><img src="img/tru-tien.jpg" style="width:100px;"></div>
+                                            <div class="jjj">Tác giả: Tiểu Đỉnh <br>
+                                               </div>
                                         </div>
                                 </td>
                                 <td>
                                     <div class="border-td">
                                         <div class="fff">
                                             <h4>
-                                                <li>Hình học đường và thiết kế định tuyến</li>
+                                                <li><a href="#">Hoa Thiên Cốt</a></li>
                                             </h4>
                                         </div>
                                         <div class="ggg">
-                                            <div class="hhh"><img src="img/img_14.jpg" style="width:100px;"></div>
-                                            <div class="jjj">Tác giả: Lại Tuấn Anh
-                                                Nhà xuất bản: Bách khoa Hà Nội
-                                                Năm xuất bản: 2018 </div>
+                                            <div class="hhh"><img src="img/hoa-thien-cot.jpg" style="width:100px;"></div>
+                                            <div class="jjj">Tác giả:Fresh Quả Quả<br>
+                                               </div>
                                         </div>
                                 </td>
                             </tr>
@@ -137,7 +133,7 @@ include("modules/header.php");
                     </div>
                     <div class="pagination">
                         <ul>
-                            <li><a href="Giaotrinh.php">1</a></li>
+                            <li><a href="Truyen.php">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
                             <li><a href="#">Next</a></li>
@@ -169,3 +165,4 @@ include("modules/header.php");
 </body>
 
 </html>
+
