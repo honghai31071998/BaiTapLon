@@ -1,7 +1,5 @@
 <?php
-  session_start();
-$id=$_GET["id"];
-?>
+
 include("template/header.php");
 ?>
     <div class="wrapper">
@@ -17,7 +15,7 @@ include("template/header.php");
             <?php
             $stt=1;
             require('../connect/config.php');
-           $sql="select user.emai,user.username,sach.tensach where ";
+           $sql="select dkmuonsach.username,dkmuonsach.email,sach.tensach from dkmuonsach,sach where dkmuonsach.id=sach.id ";
            $result=mysqli_query($conn,$sql);
            while($data=mysqli_fetch_assoc($result))//dạng mảng ko có kí tự
            
@@ -26,11 +24,9 @@ include("template/header.php");
                 echo"<th>$stt</th>";
                 echo"<th>$data[username]</th>";
                echo" <th>$data[email]</th>";
-               echo" <th>$data[ngaysinh]</th>";
-               
-              
-                }
-                echo"<th><a href='chucnang/xoa_user.php ?id=$data[id_user]'onclick='return thongbao();' style='color:red;'>Delete</a></th>";
+               echo" <th>$data[tensach]</th>"; 
+                echo"<th>$data[ngaydkmuon]";
+                echo"<th><a href='#' style='color:red;'>Chấp nhận</a></th>";
             echo"</tr>";
                   $stt=$stt+1;          }
             

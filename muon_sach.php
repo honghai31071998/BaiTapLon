@@ -52,10 +52,10 @@ if (isset($_POST['submit'])) {
 		$result=mysqli_query($conn,$sql);
 		$count=mysqli_num_rows($result);		
 	if($count==1){
-		$sql1="INSERT INTO `dkmuonsach`(`username`,`email`, `id`)
+		$sql1="INSERT INTO dkmuonsach(username,email,id)
 		 VALUES ('$username','$email','$id')";
 		mysqli_query($conn,$sql1);
-		
+		echo" đăng kí mượn sách thành công,chờ admin duyệt";
 	}
 	else {
 		echo "Sai thông tin! Mời bạn nhập lại.";
