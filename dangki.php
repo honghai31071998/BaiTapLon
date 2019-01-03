@@ -4,18 +4,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>QUẢN LÝ THƯ VIỆN</title>
-	<link rel="stylesheet" type="text/css" href="QLThuVien.css">
+	<link rel="stylesheet" type="text/css" href="css/QLThuVien.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 </head>
 <?php
     $loi=array();
     $username=$email=$pass=$day=$month=$year=$gioitinh=$kt=$a=$conn=NULL;
-    $loi['username']=$loi['email']=$loi['pass']=$loi['day']=$loi['gioitinh']=$loi['month']=$loi['year']=$loi['dangki']=$loi['conn']=NULL;
+    $loi['username']=$loi['txtemail']=$loi['txtpass']=$loi['day']=$loi['gioitinh']=$loi['month']=$loi['year']=$loi['dangki']=$loi['conn']=NULL;
     if(isset($_POST['login']))
     {
         if(empty($_POST['txtname']))
         {
-            $loi['username']="*Xin vui long nhap Username<br>";
+            $loi['username']="*Xin vui lòng nhập Username<br>";
         }
         else
         {
@@ -24,7 +24,7 @@
         if(empty($_POST['txtemail']))
         {
             
-            $loi['txtemail']="*Xin vui long nhap Email<br>";
+            $loi['txtemail']="*Xin vui lòng nhập Email<br>";
         }
         else
         {
@@ -33,7 +33,7 @@
         if(empty($_POST['txtpass']))
         {
             
-            $loi['txtpass']="*Xin vui long nhap password<br>";
+            $loi['txtpass']="*Xin vui lòng nhập password<br>";
         }
         else
         {
@@ -41,7 +41,7 @@
         }
         if(($_POST['day']=='ngay'))
         {
-            $loi['day']='*xin vui lòng nhập đầy đủ thông tin ngày sinh<br>';
+            $loi['day']='*xin vui lòng nhập  ngày sinh<br>';
         }
         else
         {
@@ -58,7 +58,7 @@
         }
         if(($_POST['year']=='nam'))
         {
-            $loi['year']='*xin vui long nhạp nam sinh<br>';
+            $loi['year']='*xin vui lòng nhập năm sinh<br>';
         }
         else{
             $year=$_POST['year'];
@@ -72,8 +72,8 @@
             $gioitinh=$_POST['gioitinh'];
         }
 
-        
-            require("connect/config.php");
+        if($username&&$pass&&$email&&$day&&$month&&$year&&$gioitinh)
+         { require("connect/config.php");
            
                
                $sql="select * from user where  email='$email'";
@@ -94,6 +94,7 @@
 
             
        mysqli_close($conn);
+            }
     }
 ?>
 <body>
@@ -140,10 +141,10 @@
 		</figure>
 	</div>
 	<!--Sidebar-->
-    <div id="container" style="padding-top:30px;">
+    <div id="container-content" style="padding-top:30px;">
         <div class="container-left">
            
-                <fieldset style="width:290px;height:200px; margin:0px 240px 240px ;">
+                <fieldset style="width:290px;height:200px; margin:0px 240px 60px 240px ;">
                     <legend style="margin-left:30px;">Đăng kí</legend>
                     <form action="dangki.php" method="post">
                         <table>
@@ -209,8 +210,8 @@
                 <div style='width:350px;height:170px;margin:10px auto;text-align:center;color:red'>
                    <?php
                     echo $loi['username'];
-                    echo $loi['email'];
-                    echo $loi['pass'];
+                    echo $loi['txtemail'];
+                    echo $loi['txtpass'];
                     echo $loi['day'];
                     echo $loi['gioitinh'];
                     echo $loi['year'];
@@ -223,19 +224,10 @@
         </div>
         <div class="container-right">
             <div class="panel-news">
-                <div class="panel-news-heading">
-                    <h4 class="panel-news-title">
-                        <br>
-                        <center>Hỗ trợ trực tuyến</center>
-                    </h4>
-                </div>
-                <div class="panel-news-body">
-                    <p>
-                        <img class="img-responsive-2" src="img/hotro.jpg" ,style="width:220px;height:180px;" alt="Image"></p>
-                </div>
-            </div>
+					<img src='img/hotrott.png' style="width:220px;">
+				</div>
         </div>
-
+                                    </div>
     
     <div id="Footer">
         <p>Websize - Quản Lý Thư Viện @2018</p>

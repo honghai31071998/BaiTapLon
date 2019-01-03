@@ -1,7 +1,9 @@
 <?php
+session_start();
 if($_SESSION['level']==2)
 {
 include('template/header.php');
+include('template/footer.php');}
 else{
    header("location:../QLThuVien.php");
    exit();

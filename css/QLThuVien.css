@@ -171,7 +171,7 @@ body{
     padding-top:30px;
     width: 1080px;
     margin: 0px auto;
-    height:1000px;
+   /* height:1000px;*/
 }
 .location{
     height:270px;
@@ -184,14 +184,14 @@ body{
 .container-left{
 	width:780px;
 	float:left;
-	height:750px;
+	/*height:750px;*/
 
 }
 .container-right{
 	width:260px;
 	float:right;
 	/*background-color: #333;*/
-	height:750px;
+	/*height:750px;*/
 	padding-left:40px;
 }
  .box-common {
@@ -217,7 +217,7 @@ body{
     font-family: "Roboto Condensed", Verdana, Geneva, sans-serif;
 }
 .block1{
-	height:270px;
+	height:200px;
 	padding-bottom: 10px;
 
 }
@@ -315,4 +315,5 @@ body{
 	border-top: 1px solid #e6e6e6;
 	color:black;
 	padding: 0.25cm 1cm;
+	height:40px;
 }

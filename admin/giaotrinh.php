@@ -4,35 +4,47 @@ include("template/header.php");
     <div class="wrapper">
         <table>
             <tr>
-                <th style="width:50px;">STT</th>
-                <th style="width:150px;">ảnh</th>
-                <th style="width:150px;">Tên Sách</th>
+                <th colspan="8"></th>
+                <th colspan="4"><a href="themgt.php" style="color:red;">Thêm giáo trình</a></th>
+            </tr>
+            <tr  style=" background-color: #00cc66;color:#FFF;">
+                <th >STT</th>
+                <th >ảnh</th>
+                <th style="width:100px;">Tên Sách</th>
                 <th style="width:100px;">Tác giả</th>
-                <th style="width:100px;">Nhà XB </th>
-                <th style="width:100px;">PhânLS</th>
-                <th style="width:300px;">Chi tiết sách</th>
-                <th style="width:50px;">Năm XB</th>
-                <th style="width:50px;">SL</th>
-                <th style="width:50px;">Sửa</th>
-                <th style="width:50px;">Link</th>
-                <th style="width:50px">Xóa</th>
+                <th>Nhà XB </th>
+                <th >PhânLS</th>
+                <th style="width:400px;">Chi tiết sách</th>
+                <th >Năm XB</th>
+                <th>SL</th>
+                <th>Sửa</th>
+                <th >Link</th>
+                <th>Xóa</th>
             </tr>
-            <tr>
-                <th>1</th>
-                <th>2</th>
-                <th>32222</th>
-                <th>4</th>
-                <th>5 </th>
-                <th>6</th>
-                <th>7</th>
-                <th>7</th>
-                <th>7</th>
-                <th>7</th>
-                <th>7</th>
-                <th>7</th>
-
-
-            </tr>
+            <?php
+            require("../connect/config.php");
+            $sql="select sach.*,ploaigt.phanloai from sach,ploaigt where sach.pl_id=ploaigt.pl_id order by id desc";
+            $result=mysqli_query($conn,$sql);
+           
+            $stt=1;
+            while($data=mysqli_fetch_assoc($result)){
+            echo"<tr>";
+                echo"<th>$stt</th>";
+                echo"<th>$data[hinhanh]</th>";
+                echo"<th>$data[tensach]</th>";
+                echo"<th>$data[tacgia]</th>";
+                echo"<th>$data[nhaxb] </th>";
+                echo"<th>$data[phanloai]</th>";
+                echo"<th>$data[mota]</th>";
+                echo"<th>$data[namxb]</th>";
+                echo"<th>$data[sl]</th>";
+                echo"<th><a href='Sua_gt.php?id=$data[id]' onclick='return thongbao1();'style='color:red;'>Sửa</a></th>";
+                echo"<th><a href='../chitietsach.php?id=$data[id]'style='color:red;'>Link</a></th>";
+                echo"<th><a href='chucnang/Xoa_gt.php ?id=$data[id]' onclick='return thongbao();'style='color:red;'>Xóa</a></th>";
+           echo" </tr>";
+        $stt++;}
+           mysqli_close($conn)
+            ?>
         </table>
     </div>
 </body>

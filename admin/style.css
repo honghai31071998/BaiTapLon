@@ -1,6 +1,6 @@
 
 body{
-    width:1200px;
+    width:1000px;
     height:auto;
     margin: 0px auto;
 }
@@ -25,7 +25,7 @@ ul{
 }
 .menu ul li{
     float:left;
-    width:299px;
+    width:165.66px;
     border-right: 1px solid floralwhite;
     text-align: center;
     line-height: 30px;/*căn giữa phần chiều cao*/
@@ -39,7 +39,7 @@ font-weight: bold;/*in đạm chữ viết*/
 .wrapper table{
     margin-top:20px;
     text-align:center;
-    width:1200px;
+    width:1000px;
     border-collapse: collapse;/* thuộc tính đường viền*/
     line-height:25px;
 }
@@ -53,7 +53,8 @@ font-weight: bold;/*in đạm chữ viết*/
     border: 1px solid #00cc66;
 }
 .footer{
-    height:100px;
+    height:40px;
     background-color: #00cc66;
     text-align:center;
+    line-height: 30px;
 }

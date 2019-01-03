@@ -1,0 +1,10 @@
+<?php 
+                           require("../connect/config.php");
+                           $sql="select*from ploaigt";
+                           $result=mysqli_query($conn,$sql);
+                           while($data=mysqli_fetch_assoc($result))//dạng mảng ko có kí tự
+                           {
+                           echo" <option value='$data[pl_id]'> $data[phanloai]</option> ";
+                       
+                            mysqli_close($conn);}
+                        ?>

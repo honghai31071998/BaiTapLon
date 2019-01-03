@@ -8,148 +8,126 @@ include("modules/header.php");
     <!--Sidebar-->
     <div id="container">
         <div class="container-left">
-            <div class="block1">
+            <div class="block1-left">
                 <div class="box-common">
                     <div class="heading">
                         <h4 class="box-title" style="width: 75%">TÌM KIẾM</h4>
                     </div>
                 </div>
                 <div class="border-tk">
-                    <div class="border-row">
+                    <form class="border-row" action="search.php"method="post">
                         <div class="row-col">
                             <h4>Tên giáo trình</h4>
                             <input type="text" name="tk" style="width:140px;">
                         </div>
-                        <div class="row-col">
+                        <div class="row-col" >
                             <h4>Phân loại </h4>
-                            <input type="text" name="tk" style="width:140px;">
+                          
+                          <select style='padding:3px 4px;' name='pl'>
+                          <?php 
+                           require("connect/config.php");
+                           $sql="select*from ploaigt";
+                           $result=mysqli_query($conn,$sql);
+                           while($data=mysqli_fetch_assoc($result))//dạng mảng ko có kí tự
+                           {
+                           echo" <option value='$data[pl_id]' name='$data[phanloai]'> $data[phanloai]</option> ";
+                       
+                            mysqli_close($conn);}
+                        ?>
+                       </select>
                         </div>
                         <div class="row-col">
                             <h4>Tìm kiếm</h4>
-                            <button class="icon-search" style="float:left;width:140px;"><i class="fas fa-search"></i></button>
+                            <button class="icon-search" style="float:left;width:140px;" name="timkiem"><i class="fas fa-search"></i></button>
                         </div>
 
-                    </div>
+                    <form>
                 </div>
             </div>
-            <div class="block2">
-                <div class="box-common">
-                    <div class="heading">
-                        <h4 class="box-title" style="width: 75%"> GIÁO TRÌNH</h4>
-                    </div>
-                </div>
-                <div class="border1">
-                    <div class="border11">
-                        <table>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="border-td">
-                                        <div class="fff">
-                                            <h4>
-                                                <li> <a href="chitietsach.php">
-                                                        Hệ thống thông tin địa lý</a></li>
-                                            </h4>
-                                        </div>
-                                        <div class="ggg">
-                                            <div class="hhh"><img src="giaotrinh/img_13.jpg" style="width:100px;"></div>
-                                            <div class="jjj">Tác giả: Hoàng Xuân Thành, Hoàng Lê Long <br>
-                                                Nhà xuất bản: Bách khoa Hà Nội <br>
-                                                Năm xuất bản: 2018 </div>
-                                        </div>
-                                </td>
-                                <td>
-                                    <div class="border-td">
-                                        <div class="fff">
-                                            <h4>
-                                                <li>Hình học đường và thiết kế định tuyến</li>
-                                            </h4>
-                                        </div>
-                                        <div class="ggg">
-                                            <div class="hhh"><img src="giaotrinh/img_14.jpg" style="width:100px;"></div>
-                                            <div class="jjj">Tác giả: Lại Tuấn Anh<br>
-                                                Nhà xuất bản: Bách khoa Hà Nội<br>
-                                                Năm xuất bản: 2018 </div>
-                                        </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="pagination">
-                        <ul>
-                            <li><a href="Giaotrinh.php">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">Next</a></li>
-                            <li><a href="#">Trang cuối</a></li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-            <div class="block2">
-                <div class="box-common">
-                    <div class="heading">
-                        <h4 class="box-title" style="width: 75%"> TL THAM KHẢO</h4>
-                    </div>
-                </div>
-                <div class="border1">
-                    <div class="border11">
-                        <table>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="border-td">
-                                        <div class="fff">
-                                            <h4>
-                                                <li>Kiểm soát chất lượng không khí bên trong công trình</li>
-                                            </h4>
-                                        </div>
-                                        <div class="ggg">
-                                            <div class="hhh"><img src="img/img_11.jpg" style="width:100px;"></div>
-                                            <div class="jjj">Tác giả: Hoàng Xuân Thành, Hoàng Lê Long <br>
-                                                Nhà xuất bản: Bách khoa Hà Nội <br>
-                                                Năm xuất bản: 2018 </div>
-                                        </div>
-                                </td>
-                                <td>
-                                    <div class="border-td">
-                                        <div class="fff">
-                                            <h4>
-                                                <li>Hình học đường và thiết kế định tuyến</li>
-                                            </h4>
-                                        </div>
-                                        <div class="ggg">
-                                            <div class="hhh"><img src="img/img_14.jpg" style="width:100px;"></div>
-                                            <div class="jjj">Tác giả: Lại Tuấn Anh
-                                                Nhà xuất bản: Bách khoa Hà Nội
-                                                Năm xuất bản: 2018 </div>
-                                        </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="pagination">
-                        <ul>
-                            <li><a href="Giaotrinh.php">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">Next</a></li>
-                            <li><a href="#">Trang cuối</a></li>
-                        </ul>
-
-                    </div>
-
-
-                </div>
-            </div>
+          
+           <?php
+           require("connect/config.php");
+           $sql2="select*from ploaigt";
+           $result2=mysqli_query($conn,$sql2);
+           while($data2=mysqli_fetch_assoc($result2))//dạng mảng ko có kí tự
+           {
+            echo"<div class='block2'>";
+                echo"<div class='box-common'>";
+                    echo"<div class='heading'>";
+                        echo"<h4 class='box-title'style='width: 75%'> $data2[phanloai]</h4>";
+                    echo"</div>";
+                echo"</div>";
+                echo"<div class='border1'>";
+                    echo"<div class='border11'>";
+                        echo"<table>";
+                           /* echo"<tr>";
+                               /*echo"<th></th>";
+                                echo"<th></th>";
+                            echo"</tr>";*/
+                            echo"<tr>";
+                                echo"<td>";
+                                    echo"<div class='border-td'>";
+                                   
+                                    $sql3="select * from sach where pl_id=$data2[pl_id] order by id desc";
+                                    $result3=mysqli_query($conn,$sql3);
+                                    $data3=mysqli_fetch_assoc($result3);
+                                    echo"<div class='fff' value='$data3[id]'>";
+                                      
+                                     echo"   <h4>";
+                                           echo" <li><a href='chitietsach.php?id=$data3[id]'>$data3[tensach]</a></li>";
+                                      echo"  </h4>";
+                                   echo" </div>";
+                                    echo"<div class='ggg'>";
+                                      echo"  <div class='hhh'><img src='connect/images/$data3[hinhanh]' style='width:100px;'></div>";
+                                        echo"<div class='jjj'>Tác giả: $data3[tacgia] <br>";
+                                           echo" Nhà xuất bản: $data3[nhaxb] <br>";
+                                           echo" Năm xuất bản: $data3[namxb] </div>";
+                                          
+                                        echo"</div>";
+                                echo"</td>";
+                                echo"<td>";
+                                    echo"<div class='border-td'>";
+                                    $sql1="select * from sach where pl_id=$data2[pl_id] order by id desc limit 1,1";
+                                        $result1=mysqli_query($conn,$sql1);
+                                        $data1=mysqli_fetch_assoc($result1);
+                                        echo"<div class='fff' value='$data1[id]'>";
+                                          
+                                         echo"   <h4>";
+                                               echo" <a href='chitietsach.php?id=$data1[id]'><li>$data1[tensach]</li></a>";
+                                          echo"  </h4>";
+                                       echo" </div>";
+                                        echo"<div class='ggg'>";
+                                          echo"  <div class='hhh'><img src='connect/images/$data1[hinhanh]' style='width:100px;'></div>";
+                                            echo"<div class='jjj'>Tác giả: $data1[tacgia] <br>";
+                                               echo" Nhà xuất bản: $data1[nhaxb] <br>";
+                                               echo" Năm xuất bản: $data1[namxb] </div>";
+                                             
+                                        echo"</div>";
+                                echo"</td>";
+                            echo"</tr>";
+                        echo"</table>";
+                    echo"</div>";
+                    echo"<div class='pagination'>";
+                    $display=2;
+                   /* $sql4="select * from sach ";
+                    $result4=mysqli_query($conn,$sql4);
+                    $sum_page=ceil($result4/$display);*/
+                        echo"<ul>";
+                       // for($page=1;$page<=$sum_page;$page)
+                            echo"<li><a href='Giaotrinh.php'>1</a></li>";
+                            echo"<li><a href='#'>2</a></li>";
+                            echo"<li><a href='#'>3</a></li>";
+                            echo"<li><a href='#'>Next</a></li>";
+                            echo"<li><a href='#'>Trang cuối</a></li>";
+                        echo"</ul>";
+                     
+                echo"</div>";
+            echo"</div>";
+            }
+            mysqli_close($conn);?>
         </div>
+           </div>
+           </div>
             <div class="container-right">
                 <div class="panel-news">
                     <div class="panel-news">
@@ -158,14 +136,12 @@ include("modules/header.php");
                 </div>
             </div>
         </div>
-
-    </div>
+        <div style="clear:left;"></div>
         <div id="Footer">
-            <p><i>Websize - Quản Lý Thư Viện @2018</i></p>
+            <p>Websize - Quản Lý Thư Viện @2018</p>
         </div>
         <!--Footer-->
     </div>
 
 </body>
-
 </html>

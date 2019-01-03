@@ -37,12 +37,21 @@
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
-                <div class="item active">
-                    <div class="ppp">
-                        <a href="#" class="kkk" style="width:196px;">
-                            <img src="giaotrinh/bg-tu-tuong-hcmthumb.jpg" alt="Los Angeles" style="height:180px;">
+                
+                
+               <div class="item active">
+                   <div class="ppp">
+                   <?php 
+                   require('connect/config.php');
+                   $sql="select * from sach order by id limit 5";
+                   $result=mysqli_query($conn,$sql);
+                        while($data=mysqli_fetch_assoc($result))
+                        {echo" <a href='chitietsach.php?id=$data[id]' class='kkk' style='width:196px;'>";
+                            echo"<img src= 'connect/images/$data[hinhanh]'alt='giaotrinh' style='height:180px;'>";
 
-                        </a>
+                      echo"</a>";}
+                      mysqli_close($conn);/*
+                      
                         <a href="#" class="kkk">
                             <img src="giaotrinh/cam-nang-doanhthumb.jpg" alt="Los Angeles" style="height:180px;">
 
@@ -56,19 +65,23 @@
                         </a>
                         <a href="#" class="kkk">
                             <img src="giaotrinh/img_11.jpg" alt="Los Angeles" style="height:180px;">
-                        </a>
+                        </a>*/
+                        ?>
                     </div>
                 </div>
                 
                 <div class="item">
                     <div class="ppp">
-                            <a href="#" class="kkk">
-                                <img src="giaotrinh/img_13.jpg" alt="Los Angeles" style="height:180px;"></a>
-                            <a href="#" class="kkk">
-                                <img src="giaotrinh/kiem-soat-chatthumb.jpg" alt="Los Angeles" style="height:180px;"></a>
-                            <a href="#" class="kkk"></a>
-                            <a href="#" class="kkk"></a>
-                            <a href="#" class="kkk"></a>
+                    <?php 
+                   require('connect/config.php');
+                   $sql="select * from sach order by id limit 5,10";
+                   $result=mysqli_query($conn,$sql);
+                        while($data=mysqli_fetch_assoc($result))
+                        {echo" <a href='chitietsach.php?id=$data[id]' class='kkk' style='width:196px;'>";
+                            echo"<img src= 'connect/images/$data[hinhanh]'alt='giaotrinh' style='height:180px;'>";
+
+                      echo"</a>";}
+                      mysqli_close($conn);?>
                     </div>
             </div>
 

@@ -1,6 +1,6 @@
 
  .border11{
-    height:250px;
+    height:200px;
 }
 .border11-left{
 	width:250px;
@@ -55,19 +55,18 @@
     padding-top:30px;
     width: 1080px;
     margin: 0px auto;
-    height:1150px;
+   
 }
 .container-left{
 	width:780px;
 	float:left;
-	height:1150px;
-
+	
 }
 .container-right{
 	width:260px;
 	float:right;
 	/*background-color: #333;*/
-	height:1150px;
+
 	padding-left:40px;
 }
  .box-common {
@@ -103,7 +102,7 @@
 .block2{
    /* padding-top:30px;*/
     width:780px;
-    height:350px;
+    height:300px;
    
 }
 .border-tk{
@@ -113,14 +112,14 @@
 }
 .border1{
     width:778px;
-    height:300px;
+    height:220px;
 }
 
-th{
+.border11 th{
     width:778px;
     height:20px;
 }
-td{
+.border11 td{
     width:778px;
     height:225px;
 }
@@ -148,7 +147,7 @@ td{
     height:165px;
 }
 .pagination{
-	height:50px;
+	height:30px;
 	width:350px;
 	float:right;;
 
@@ -178,6 +177,20 @@ td{
 
 	float: left;
 }
+.block1-left{
+    height:220px;
+}
 
-
+.border21{
+    width:778px;
+    height:250px;
+}
+.border21-left{
+    width:250px;
+    float:left;
+}
+.border21-right{
+    width:528px;
+    float:left;
+}
 /*THUỘC TÍNH CONTAINER-RIGHT*/
