@@ -4,10 +4,10 @@ include("template/header.php");
 <?php
 $loi=array();
 $loi["ts"]=$loi["ha"]=$loi["tg"]=$loi["namxb"]=$loi["nhaxb"]=$loi["mota"]=$loi["sl"]=NULL;
-$ts=$idTL=$ha=$tg=$namxb=$nhaxb=$mota=$sl=NULL;
+$ts=$idpl=$ha=$tg=$namxb=$nhaxb=$mota=$sl=NULL;
 if(isset($_POST["add"]))
 {
-    $idTL=$_POST["TL"];
+    $idpl=$_POST["pl"];
   
     
     if(empty($_POST["ts"]))
@@ -35,9 +35,14 @@ if(isset($_POST["add"]))
     {
         $tg=$_POST["tg"];
     }
-    
+    if(empty($_POST["nhaxb"]))
+    {
+        $loi['nhaxb']="*Chưa điền nhà xb";
+    }
+    else
+    {
         $nhaxb=$_POST["nhaxb"];
-    
+    }
     if(empty($_POST["mota"]))
     {
         $loi['mota']="*Chưa điền thông tin sách";
@@ -65,7 +70,7 @@ if(isset($_POST["add"]))
     if($ts&&$tg&&$namxb&&$nhaxb&&$mota&&$ha&&$sl)
     { require("../connect/config.php");
         $sql="INSERT INTO truyen(tentruyen,hinhanh,tacgia,nhaxb,id_TL,mota,namxb,sl) 
-        VALUES('$ts','$ha','$tg','$nhaxb','$idTL','$mota','$namxb','$sl')";
+        VALUES('$ts','$ha','$tg','$nhaxb','$idpl','$mota','$namxb','$sl')";
         mysqli_query($conn,$sql);
         mysqli_close($conn);
    move_uploaded_file($_FILES["ha"]["tmp_name"],"../connect/images/".$_FILES["ha"]["name"]);
@@ -76,12 +81,12 @@ if(isset($_POST["add"]))
 ?>
     <div id="wrapper" style="margin:0px auto">
         <fieldset style="width:600px;margin:20px auto;">
-            <legend style="padding-left:50px;"> Thêm truyện</legend>
-            <form action="themtruyen.php " method="post" enctype="multipart/form-data">
+            <legend style="padding-left:50px;"> Thêm giáo trình</legend>
+            <form action="themtruyen1.php " method="post" enctype="multipart/form-data">
                 <table>
                     <tr>  
                         <td>Phân loại </td>
-                        <td><select style='padding:3px 4px;' name='TL'><?php
+                        <td><select style='padding:3px 4px;' name='pl'><?php
                            require("../connect/config.php");
                            $sql="select*from theloaitruyen";
                            $result=mysqli_query($conn,$sql);
@@ -89,13 +94,13 @@ if(isset($_POST["add"]))
                            {
                            echo" <option value='$data[id_TL]'> $data[TenTL]</option> ";}
                            mysqli_close($conn);
-                           
+                         echo"$data[tentruyen]";  
                     
                       ?>
                         </td>
                     </tr>
                     <tr>
-                        <td>Tên truyện</td>
+                        <td>Tên sách</td>
                         <td><input type="text" name="ts" size="50">
                     </td>
                     </tr>
@@ -112,7 +117,7 @@ if(isset($_POST["add"]))
                         <td><input type="text" name="nhaxb" size="50"></td>
                     </tr>
                     <tr>
-                        <td>Chi tiết truyên</td>
+                        <td>Chi tiết sách</td>
                         <td><textarea cols="60" rows="10" name="mota"></textarea></td>
                     </tr>
                     <tr>
@@ -133,7 +138,7 @@ if(isset($_POST["add"]))
                         echo $loi["ha"];
                         echo $loi["tg"];
                         echo $loi["namxb"]; 
-                      
+                        echo $loi["nhaxb"];
                         echo $loi["mota"];
                         echo $loi["sl"];
                         ?>
@@ -148,3 +153,5 @@ if(isset($_POST["add"]))
     ?>
 </body>
 </html>
+
+    

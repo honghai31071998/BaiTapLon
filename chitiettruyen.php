@@ -18,7 +18,7 @@ include("modules/header.php");
                 <div class="border3">
                 <?php 
                     require("connect/config.php");
-                    $sql="select truyen.hinhanh,truyen.tentruyen,truyen.tacgia,truyen.nhaxb,truyen.namxb,truyen.mota ,theloaitruyen.TenTL from theloaitruyen, truyen 
+                    $sql="select truyen.id,truyen.hinhanh,truyen.tentruyen,truyen.tacgia,truyen.nhaxb,truyen.namxb,truyen.mota ,theloaitruyen.TenTL from theloaitruyen, truyen 
                     where theloaitruyen.id_TL=truyen.id_TL and truyen.id=$id";
                     $result=mysqli_query($conn,$sql);
                     $data=mysqli_fetch_assoc($result);
@@ -37,7 +37,7 @@ include("modules/header.php");
                         echo"</div>";
                     echo"</div>";
                     echo"<p>$data[mota] <p>";
-                    echo"<button type='button' style='float:right;color:red;'  name='muonsach'>Mượn Sách</button>";
+                    echo"<button type='button' style='float:right;color:red;'  name='muonsach'><a href='muon_sach.php?id=$data[id]'>Mượn Sách</a></button>";
                     ?>
                 </div>
                 

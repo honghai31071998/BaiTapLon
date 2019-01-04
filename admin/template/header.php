@@ -41,7 +41,7 @@
             <li><a href="giaotrinh.php">Giáo trình</a></li>
             <li><a href="theloaitruyen.php">Thể loại truyện</a></li>
             <li><a href="truyen.php"> Truyện</a></li>
-            <li><a href="#">Quản lí mượn trả </a></li>
+            <li><a href="dangkimuon.php">Quản lí mượn trả </a></li>
         </ul>
     </div>
     <div style="clear:left;"></div>

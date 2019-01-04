@@ -56,6 +56,7 @@ if (isset($_POST['submit'])) {
 		 VALUES ('$username','$email','$id')";
 		mysqli_query($conn,$sql1);
 		echo" đăng kí mượn sách thành công,chờ admin duyệt";
+		$loi['submit']="đăng kí mượn sách thành công,chờ admin duyệt<a href='QLThuVien.php";
 	}
 	else {
 		echo "Sai thông tin! Mời bạn nhập lại.";

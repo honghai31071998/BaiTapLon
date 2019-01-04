@@ -19,13 +19,13 @@
 				<img src="img/imgsach.jpg" width="250px;">
 			</div>
 			<div id="slogan">
-				<div id="search">
-					<div id="search-box">
+				<div id="search"type="hidden" >
+					<div id="search-box"style="display:none">
 						<input class="search-box-input" type="text" name="timkiem" value="Tìm kiếm"></input>
 						<button class="icon-search"><i class="fas fa-search"></i></button>
 					</div>
 				</div>
-				<div id="ab"> <h2><i>Website Quản Lý Thư Viện</i></h2> 
+				<div id="ab"> <h2><i>Websize Quản Lý Thư Viện</i></h2> 
 				</div>
 			</div>
 			<div id="abc">
@@ -49,7 +49,7 @@
 				<li><a href="GioiThieu.html">Giới Thiệu</a></li>
 				<li><a href="Giaotrinh.php">Giáo Trình</a></li>
 				<li><a href="Truyen.php">Truyện</a></li>
-				<li><a href="#">Trợ Giúp</a></li>
+			
 				<li><a href="#">Liên hệ</a></li>
 			</ul>
 		</div>
