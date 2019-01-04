@@ -46,7 +46,7 @@ include("modules/header.php");
 		
 		<div style="clear:left;"></div>
 	<div id="Footer"style="margin-top:100px;">
-		<p>Websize - Quản Lý Thư Viện @2018</p>
+		<p>Website - Quản Lý Thư Viện @2018</p>
 	</div>
 	<!--Footer-->
 	</div>

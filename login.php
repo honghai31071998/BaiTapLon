@@ -73,7 +73,7 @@ $username=$pass=NULL;
 				<img src="img/imgsach.jpg" width="250px;"></div>
 			<div id="slogan">
 				<div id="search">
-					<div id="search-box">
+					<div id="search-box" style="display: none;">
 						<input class="search-box-input" type="text" name="timkiem" value="Tìm kiếm"></input>
 						<button class="icon-search"><i class="fas fa-search"></i></button>
 					</div>
@@ -89,12 +89,11 @@ $username=$pass=NULL;
 		<!--header-->
 		<div id="Menu">
 			<ul>
-				<li><a href="QLThuVien.html">Trang Chủ</a></li>
+				<li><a href="QLThuVien.php">Trang Chủ</a></li>
 				<li><a href="GioiThieu.html">Giới Thiệu</a></li>
-				<li><a href="Giaotrinh.html">Giáo Trình</a></li>
-				<li><a href="Truyen.html">Truyện</a></li>
-				<li><a href="GiaoTrinh.php">Mượn sách</a></li>
-				<li><a href="#">Trợ Giúp</a></li>
+				<li><a href="Giaotrinh.php">Giáo Trình</a></li>
+				<li><a href="Truyen.php">Truyện</a></li>
+				<li><a href="#">Liên Hệ</a></li>
 			</ul>
 		</div>
 		<!--menu-->
@@ -109,7 +108,7 @@ $username=$pass=NULL;
 			<img src="img/imgsach5.jpg" width="́60px" height="400px">
 		</figure>
 	</div>
-        <div id="container-content" style="padding-top:30px;">
+        <div id="container-content" style="padding-top:30px; height:600px; ">
         <div class="container-left">
     
                 <fieldset style="width:290px;height:170px; margin:50px 240px 60px 240px ;">
@@ -153,7 +152,7 @@ $username=$pass=NULL;
 
     </div>
     <div id="Footer">
-        <p>Websize - Quản Lý Thư Viện @2018</p>
+        <p>Website - Quản Lý Thư Viện @2018</p>
     </div>
     <!--Footer-->
     </div>
